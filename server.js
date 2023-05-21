@@ -2,6 +2,7 @@ var express = require("express");
 var fs = require("fs");
 var app = express();
 var http = require("http").Server(app);
+console.log("Majd");
 
 app.use(express.static("public"));
 
