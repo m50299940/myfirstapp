@@ -10,21 +10,8 @@ http.listen(3000, function () {
 });
 
 app.get("/", function (req, res) {
+    
+    console.log("yes");
 
     res.sendFile(__dirname + "/index.html");
-});
-
-console.log("nach");
-const path = "./config.json"
-const config = { ip: "10.10.10.10", port: 3000 };
-console.log(config);
-console.log(JSON.stringify(config));
-console.log(JSON.parse(JSON.stringify(config)));
-console.log(path, config);
-fs.writeFile(path, JSON.stringify(config, null, 2), (error) => {
-    if (error) {
-        console.log("Nooooooooooooooooooo", error);
-        return;
-    }
-    console.log("yyyyyyyyyyyyyyyyyyyyyes");
 });
