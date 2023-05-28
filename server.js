@@ -17,26 +17,14 @@ app.get("/", function (req, res) {
 
 
     res.write(get("Majd"));
+    res.write(get(process.memoryUsage()["heapUsed"]));
+    res.write(get(__dirname));
+    res.write(get(__filename));
     res.end();
 });
 
 function get(params) {
     console.log(params);
-
-    //console.log(typeof (params));
-
-    const { join } = require('path');
-
-    const fromPath = join(__dirname, "from", "move-me.txt");
-    const destPath = join(__dirname, "to", "move-me.txt");
-
-    console.log(fromPath);
-    console.log(destPath);
-
-    console.log("dkfjlöak");
-
-    console.log(__dirname);
-    console.log(__filename);
 
     return "<h1>" + params + "</h1>";
 }
