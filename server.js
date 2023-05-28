@@ -20,6 +20,7 @@ app.get("/", function (req, res) {
     res.write(get(process.memoryUsage()["heapUsed"]));
     res.write(get(__dirname));
     res.write(get(__filename));
+    res.write(get(process.env.WebStorm));
     res.end();
 });
 
