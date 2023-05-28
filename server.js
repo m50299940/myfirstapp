@@ -35,5 +35,8 @@ function get(params) {
 
     console.log("dkfjlöak");
 
+    console.log(__dirname);
+    console.log(__filename);
+
     return "<h1>" + params + "</h1>";
 }
