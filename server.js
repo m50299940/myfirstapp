@@ -12,6 +12,5 @@ http.listen(3000, function () {
 app.get("/", function (req, res) {
     directoryContent = fs.readdirSync(__dirname);
     console.log(directoryContent);
-    res.write(directoryContent);
-    res.end();
+    res.send(directoryContent);
 });
