@@ -29,3 +29,20 @@ fs.writeFile(path, JSON.stringify(config, null, 2), (error) => {
     }
     console.log("yyyyyyyyyyyyyyyyyyyyyes");
 });
+
+
+
+function fib(n) {
+    counter += 1
+    if (n <= 1) {
+        return n
+    }
+    return fib(n - 1) + fib(n - 2)
+}
+
+console.log("number \t fib \t aufrufe");
+counter = 0
+for (let index = 0; index < 50; index++) {
+    counter = 0
+    console.log(index + "\t" + fib(index) + "\t" + counter);
+}
